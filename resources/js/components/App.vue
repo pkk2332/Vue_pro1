@@ -3,15 +3,13 @@
         <aa></aa>
 
 
-    <div class="container-fluid">
-               <h1>The best library ever in the world, u can find most of the books and here and download it for free </h1>
+    <div class="container pt-5" >
+               <h2>The best library ever in the world, u can find most of the books and here and download it for free </h2>
                        <hr>
        
 
-<!-- 
-            <router-link to="/">Home</router-link>
- <router-link :to="{ name:'detail' }">Detail</router-link>
-          -->          
+
+        
                      <router-view></router-view>
 
     </div>

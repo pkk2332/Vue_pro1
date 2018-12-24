@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.show[data-v-fa6affac]{\n\tdisplay:block !important;\n}\n.hide[data-v-fa6affac]{\n\tdisplay:none;\n\tmargin:0 auto;\n}\n\n", ""]);
 
 // exports
 
@@ -123,6 +123,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -132,7 +136,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       count: 0,
-      busy: false
+      busy: true
 
     };
   },
@@ -142,12 +146,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var _this = this;
 
       this.busy = true;
+
       setTimeout(function () {
-        _this.busy = false;
+
         _this.count += 9;
+
+        _this.busy = false;
+
         console.log(_this.count);
-      }, 2000);
+      }, 1000);
     }
+  },
+  mounted: function mounted() {
+    this.busy = false;
   }
 });
 
@@ -418,7 +429,7 @@ var render = function() {
                 staticStyle: { "border-radius": "5%" },
                 attrs: {
                   src:
-                    "https://loremflickr.com/320/240/chinese,beautiful,girl/all?random=" +
+                    "https://loremflickr.com/320/240/asian,beautiful,girl/all?random=" +
                     x,
                   alt: "Card image cap"
                 }
@@ -430,6 +441,13 @@ var render = function() {
         ])
       })
     ),
+    _vm._v(" "),
+    _c("div", [
+      _c("img", {
+        class: { hide: true, show: _vm.busy },
+        attrs: { src: "giphy.gif" }
+      })
+    ]),
     _vm._v(" "),
     _c("div", {
       directives: [

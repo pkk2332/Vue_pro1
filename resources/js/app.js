@@ -10,7 +10,7 @@ import Vue from 'vue'
 import router from './route'
 import App from './components/App'
 
-
+require('vue2-animate/dist/vue2-animate.min.css')
 
 
 

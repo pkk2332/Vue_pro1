@@ -1,18 +1,18 @@
 webpackJsonp([0],{
 
-/***/ 54:
+/***/ 50:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(56)
+  __webpack_require__(54)
 }
-var normalizeComponent = __webpack_require__(1)
+var normalizeComponent = __webpack_require__(12)
 /* script */
-var __vue_script__ = __webpack_require__(58)
+var __vue_script__ = __webpack_require__(56)
 /* template */
-var __vue_template__ = __webpack_require__(60)
+var __vue_template__ = __webpack_require__(58)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +52,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 56:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(55);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(5)("26f7865a", content, false, {});
+var update = __webpack_require__(11)("26f7865a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,28 +79,32 @@ if(false) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(false);
+exports = module.exports = __webpack_require__(3)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.show[data-v-fa6affac]{\n\tdisplay:block !important;\n}\n.hide[data-v-fa6affac]{\n\tdisplay:none;\n\tmargin:0 auto;\n}\n\n", ""]);
+exports.push([module.i, "\n.show[data-v-fa6affac]{\n\tdisplay:block !important;\n  width: 150px\n}\n.hide[data-v-fa6affac]{\n\tdisplay:none;\n\tmargin:0 auto;\n}\n.fade-enter-active[data-v-fa6affac],\n.fade-leave-active[data-v-fa6affac] {\n  -webkit-transition-duration: 0.3s;\n          transition-duration: 0.3s;\n  -webkit-transition-property: height, opacity;\n  transition-property: height, opacity;\n  -webkit-transition-timing-function: ease;\n          transition-timing-function: ease;\n  overflow: hidden;\n}\n.fade-enter[data-v-fa6affac],\n.fade-leave-active[data-v-fa6affac] {\n  opacity: 0\n}\n\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 58:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_scroll__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_scroll__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_infinite_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_infinite_scroll__);
+//
+//
+//
+//
 //
 //
 //
@@ -136,6 +140,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       count: 0,
+      show: false,
       busy: true
 
     };
@@ -164,7 +169,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 59:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 (function (global, factory) {
@@ -405,80 +410,92 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 60:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h5", [_vm._v("This is Home component")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(_vm.count, function(x) {
-        return _c("div", { staticClass: "col-12 col-md-6 col-lg-4" }, [
-          _c(
+  return _c(
+    "div",
+    [
+      _c("h2", [
+        _vm._v(
+          "The best library ever in the world, u can find most of the books and here and download it for free "
+        )
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("h5", [_vm._v("This is Home component")]),
+      _vm._v(" "),
+      _c(
+        "transition-group",
+        { staticClass: "row", attrs: { name: "bounce", tag: "div" } },
+        _vm._l(_vm.count, function(x) {
+          return _c(
             "div",
-            { staticClass: "card m-2", staticStyle: { width: "18rem" } },
+            { key: x, staticClass: " col-md-6 col-12 col-lg-4" },
             [
-              _c("img", {
-                staticClass: "card-img-top",
-                staticStyle: { "border-radius": "5%" },
-                attrs: {
-                  src:
-                    "https://loremflickr.com/320/240/asian,beautiful,girl/all?random=" +
-                    x,
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _vm._m(0, true)
+              _c(
+                "div",
+                { staticClass: "card m-2", staticStyle: { width: "18rem" } },
+                [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    staticStyle: { "border-radius": "5%" },
+                    attrs: {
+                      src:
+                        "https://loremflickr.com/320/240/asian,chinese,beautiful,girl/all?random=" +
+                        x,
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass: "card-text",
+                        staticStyle: { "font-size": "15px" }
+                      },
+                      [_vm._v("Showing some Random Images")]
+                    )
+                  ])
+                ]
+              )
             ]
           )
-        ])
-      })
-    ),
-    _vm._v(" "),
-    _c("div", [
-      _c("img", {
-        class: { hide: true, show: _vm.busy },
-        attrs: { src: "giphy.gif" }
-      })
-    ]),
-    _vm._v(" "),
-    _c("div", {
-      directives: [
-        {
-          name: "infinite-scroll",
-          rawName: "v-infinite-scroll",
-          value: _vm.loadMore,
-          expression: "loadMore"
+        })
+      ),
+      _vm._v(" "),
+      _c("div", [
+        _c("img", {
+          class: { hide: true, show: _vm.busy },
+          attrs: { src: "giphy.gif" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        directives: [
+          {
+            name: "infinite-scroll",
+            rawName: "v-infinite-scroll",
+            value: _vm.loadMore,
+            expression: "loadMore"
+          }
+        ],
+        attrs: {
+          "infinite-scroll-disabled": "busy",
+          "infinite-scroll-distance": "10"
         }
-      ],
-      attrs: {
-        "infinite-scroll-disabled": "busy",
-        "infinite-scroll-distance": "10"
-      }
-    })
-  ])
+      })
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
-      _c(
-        "p",
-        { staticClass: "card-text", staticStyle: { "font-size": "15px" } },
-        [_vm._v("Showing some Random Images")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

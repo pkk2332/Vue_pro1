@@ -1,6 +1,6 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
-import not from "./components/notfound"
+
 
 // const Home = () => import('./components/home')
 // const Detail=()=>import('./components/Detail')
@@ -13,7 +13,7 @@ Vue.use(VueRouter)
 const routes=[
  {path:'/', name : 'home', component: () => System.import('./components/home') },
  {path:'/dd/:id?', name : 'detail', component:()=>System.import('./components/Detail')},
- { path: '*', name:'404' , component: not }
+ { path: '*', name:'404' , component:()=>System.import('./components/notfound')}
 ]
 
 
